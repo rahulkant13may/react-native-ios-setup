@@ -101,7 +101,7 @@ fetchNewsCard() {
       <View>
               <AdMobBanner
                 adSize="smartBannerPortrait"
-                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                adUnitID="ca-app-pub-9900815965563824/3882920839"
                 ref={el => (this._smartBannerExample = el)}
                 // styles={{marginTop:10}}
               />

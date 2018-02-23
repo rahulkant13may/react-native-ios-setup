@@ -24,6 +24,8 @@ import {
   PublisherBanner,
 } from 'react-native-admob';
 
+var setAdId = false;
+
 class FlatListApp extends Component {
 
   static navigationOptions = ({ navigation }) => ({
@@ -58,6 +60,18 @@ class FlatListApp extends Component {
 
   componentWillMount() {
     this.makeRemoteRequest();
+  }
+
+  componentDidMount() {
+
+        if(!setAdId){
+          AdMobInterstitial.setAdUnitID('ca-app-pub-9900815965563824/3523828184');
+          setAdId = true
+        }
+  }
+
+  componentWillUnmount() {
+    AdMobInterstitial.removeAllListeners();
   }
 
   makeRemoteRequest = () => {
@@ -205,7 +219,7 @@ class FlatListApp extends Component {
             </View>
               <AdMobBanner
                 adSize="smartBannerPortrait"
-                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                adUnitID="ca-app-pub-9900815965563824/3882920839"
                 ref={el => (this._smartBannerExample = el)}
                 // styles={{marginTop:10}}
               />
