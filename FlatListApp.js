@@ -17,12 +17,12 @@ import BitCoinAnalysis from './BitCoinAnalysis';
 import BitCoinCalculator from './BitCoinCalculator';
 import BitCoinChat from './BitCoinChat';
 import StackNav from './StackNav';
-// import {
-//   AdMobBanner,
-//   AdMobRewarded,
-//   AdMobInterstitial,
-//   PublisherBanner,
-// } from 'react-native-admob';
+import {
+  AdMobBanner,
+  AdMobRewarded,
+  AdMobInterstitial,
+  PublisherBanner,
+} from 'react-native-admob';
 
 class FlatListApp extends Component {
 
