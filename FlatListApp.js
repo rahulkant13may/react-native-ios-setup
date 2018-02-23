@@ -199,10 +199,16 @@ class FlatListApp extends Component {
                 </View>
                 <View>
                     <Text style={header}>
-                        Top Cryptocurrency Listkk
+                        Top Cryptocurrency List
                     </Text>
                 </View>
             </View>
+              <AdMobBanner
+                adSize="smartBannerPortrait"
+                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                ref={el => (this._smartBannerExample = el)}
+                // styles={{marginTop:10}}
+              />
             <SearchBar lightTheme placeholder="Search Coin" onChangeText={(e) => this.coinSearch(e)}/>
         </View>
 

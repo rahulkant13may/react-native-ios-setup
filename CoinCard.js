@@ -104,12 +104,7 @@ const CoinCard = ({ rank, symbol, coin_name, price_usd, percent_change_1h, perce
     
     return (
         <View style={container}>
-            <View style={styles.containerSecond}>
-                <Image
-                    style={styles.image}
-                    source={{ uri: `https://files.coinmarketcap.com/static/img/coins/32x32/${coin_name.replace(/\s+/g, '-').toLowerCase()}.png` }}
-                />
-            </View>
+
             <View style={upperRow}>
                     <Text style={coinRank}>{rank}</Text>
                     <Text style={coinSymbol}>{symbol}</Text>

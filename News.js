@@ -20,7 +20,12 @@ import { DrawerNavigator } from 'react-navigation';
 import { Icon } from "react-native-elements";
 import NewsCard from './NewsCard';
 import BlankCard from './BlankCard';
-
+import {
+  AdMobBanner,
+  AdMobRewarded,
+  AdMobInterstitial,
+  PublisherBanner,
+} from 'react-native-admob';
 
 export default class News extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -94,6 +99,12 @@ fetchNewsCard() {
     console.log(this.state.news_data)
     return (
       <View>
+              <AdMobBanner
+                adSize="smartBannerPortrait"
+                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                ref={el => (this._smartBannerExample = el)}
+                // styles={{marginTop:10}}
+              />
                 <View style={{backgroundColor: 'white'}}>
                     <ScrollView contentContainerStyle={contentContainer}>
                         { this.fetchNewsCard()}

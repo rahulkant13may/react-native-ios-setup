@@ -11,6 +11,12 @@ import {
 
 import { Icon } from "react-native-elements";
 import IOSIcon from "react-native-vector-icons/Ionicons";
+import {
+  AdMobBanner,
+  AdMobRewarded,
+  AdMobInterstitial,
+  PublisherBanner,
+} from 'react-native-admob';
 
 export default class CustomHeader extends Component {
     render() {
@@ -26,6 +32,12 @@ export default class CustomHeader extends Component {
                     </Text>
                 </View>
             </View>
+              <AdMobBanner
+                adSize="smartBannerPortrait"
+                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                ref={el => (this._smartBannerExample = el)}
+                // styles={{marginTop:10}}
+              />
         </View>
         );
     }
