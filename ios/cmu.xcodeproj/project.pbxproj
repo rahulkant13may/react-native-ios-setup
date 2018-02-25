@@ -40,7 +40,6 @@
 		3680C0E940FD40ACB6477639 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A95888DA4B3C40C7B20B2FB5 /* Zocial.ttf */; };
 		40086FF2A9C741E0ADDDAEE2 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ACF84FDD3461792A87D57 /* SimpleLineIcons.ttf */; };
 		5BF7E1FD97476ED540812DB5 /* libPods-cmuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2EA0A81F548390453B17 /* libPods-cmuTests.a */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		66DF4BA09C7644029E54C4E2 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FED7EC970D6B4D999C8AA570 /* Feather.ttf */; };
 		6C7EDBFBBA294AC56C52676F /* libPods-cmu-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A55272D4E57577AC106544 /* libPods-cmu-tvOSTests.a */; };
 		7F229E58376E474593220161 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4174FE6410A4102B2C8A400 /* MaterialCommunityIcons.ttf */; };
@@ -51,6 +50,7 @@
 		B3F015ABB4AA7046F1A89BE4 /* libPods-cmu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EB787D1E188CB9BDDED25A /* libPods-cmu.a */; };
 		B81FFD4B900E4DBC99864BFB /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0CA6A84657247CD961B1FC0 /* Entypo.ttf */; };
 		C056795508BD4D0AA30B067E /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4B9C4FF2A5A458C947D209C /* Ionicons.ttf */; };
+		D83BF1B920408F9100D3FEB6 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		E16AFBE5AC604215A6DA6339 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE249C015C4A90BC9DA332 /* EvilIcons.ttf */; };
 		EBBE87145C1C41D489CE4257 /* libRNAdMobManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A84774EC4C6644C79132DC3C /* libRNAdMobManager.a */; };
 		F29F8D885E104DFFA3F4AC59 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 056391514E574C168034A05F /* FontAwesome.ttf */; };
@@ -417,9 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				D83BF1B920408F9100D3FEB6 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -816,12 +815,15 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 8WB723S4P4;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1546,6 +1548,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cmu.app/cmu";
 			};
@@ -1574,6 +1577,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cmu.app/cmu";
 			};
@@ -1586,6 +1590,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 8WB723S4P4;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1598,7 +1604,9 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkant.cmu;
 				PRODUCT_NAME = cmu;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1609,6 +1617,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8WB723S4P4;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1621,7 +1631,9 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulkant.cmu;
 				PRODUCT_NAME = cmu;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1767,15 +1779,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1808,8 +1824,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1817,6 +1835,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
