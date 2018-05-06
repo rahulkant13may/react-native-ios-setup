@@ -21,26 +21,26 @@ export default class BitCoinAnalysis extends Component {
       />
     ),
   });
-  render() { 
+   navigateToBrowser(url){
+    Linking.canOpenURL(url).then(supported => {
+      if (!supported) {
+        console.log('Can\'t handle url: ' + url);
+      } else {
+        return Linking.openURL(url);
+      }
+    }).catch(err => console.error('An error occurred', err));
+   }
+
+  render() {   
+
     return (
       <View style={{flex: 1}}>
-        <CustomHeader navigation={this.props.navigation}/>
-        <View style={{flex:1}}>
-          <WebView
-          ref={WEBVIEW_REF}
-          automaticallyAdjustContentInsets={false}
-          source={{uri: "https://www.ccn.com/bitcoin-analysis/"}}
-          javaScriptEnabled={true}
-          domStorageEnabled={true}
-          decelerationRate="normal"
-          startInLoadingState={true}
-          scalesPageToFit={true}
-          />
-        </View>
+        {this.navigateToBrowser("https://www.ccn.com/bitcoin-analysis/")}
     </View>
-    );  
+    );
   }
 }
+
 
 
 const styles = StyleSheet.create({

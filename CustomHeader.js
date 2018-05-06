@@ -34,7 +34,7 @@ export default class CustomHeader extends Component {
             </View>
               <AdMobBanner
                 adSize="smartBannerPortrait"
-                adUnitID="ca-app-pub-8591725778089834/4662067266"
+                adUnitID="ca-app-pub-3940256099942544/6300978111"
                 ref={el => (this._smartBannerExample = el)}
                 // styles={{marginTop:10}}
               />

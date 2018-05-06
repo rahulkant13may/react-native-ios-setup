@@ -219,7 +219,7 @@ class FlatListApp extends Component {
             </View>
               <AdMobBanner
                 adSize="smartBannerPortrait"
-                adUnitID="ca-app-pub-9900815965563824/3882920839"
+                adUnitID="ca-app-pub-3940256099942544/6300978111"
                 ref={el => (this._smartBannerExample = el)}
                 // styles={{marginTop:10}}
               />
@@ -291,7 +291,7 @@ const { headerContainer, header } = styles;
 
 const  SimpleAppNavigator = DrawerNavigator({
   Home: { screen: FlatListApp },
-  StackNav: {screen: StackNav},
+  // StackNav: {screen: StackNav},
   BitCoinAnalysis: {screen: BitCoinAnalysis},
   BitCoinCalculator: { screen: BitCoinCalculator },
   BitCoinChat: { screen: BitCoinChat },
